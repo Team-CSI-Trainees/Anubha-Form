@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,57 @@
     <title>Validation Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Computer Society of India<br>AKGEC STUDENT BRANCH</h1>
     <h3>Please fill the following form if you wish to be the part of our program
     </h3>
-    <form>
+    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
         <div class="design" id="name">
         Name:<input type="text" name="fname">
-        <span class="error"><b>*Please Fill the details correctly</b></span>
+        <span class="form_error"></span>
         </div>
+
         <div class="design" id="email">
             Email:<input type="email" name="femail">
-            <span class="error"><b>*Please Fill the details correctly</b></span>
+            <span class="form_error"><b></b></span>
             </div>
-            <div class="design" id="phone">
-                Phone Number:<input type="phone">
-                <span class="error"><b>*Please Fill the details correctly</b></span>
-                </div>
-                <div class="design" id="password">
-                    Password:<input type="password">
-                    <span class="error"><b>*Please Fill the details correctly</b></span>
-                    </div>
-                    <div class="design" id="repassword">
-                       Confirm Password:<input type="password">
-                        <span class="error"><b>*Please Fill the details correctly</b></span>
-                        </div>
-    
 
+         <div class="design" id="phone">
+            Phone Number:<input type="phone" name="fphone">
+            <span class="form_error"><b></b></span>
+            </div>
+
+        <div class="design" id="pass">
+            Password:<input type="password" name="fpass">
+            <span class="form_error"><b></b></span>
+            </div>
+                    
+        <div class="design" id="cpass">
+            Confirm Password:<input type="password" name="fcpass">
+            <span class="form_error"><b></b></span>
+            </div>
+        <input type="submit" class="btn" value="Submit">
     </form>
 </body>
+
+<script>
+        function seterror( id, error)
+    {
+        //set error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName('form_error')[0].innerHtml = error;
+    }
+    function validateForm()
+    {
+        var returnval = true;
+        var name = document.forms['myForm']["fname"].value;
+            if(name.length<3)
+                {
+                     seterror("name","Length is too short");
+                     returnval = false;
+                }
+    return returnval;
+    }
+ </script>
 </html>
