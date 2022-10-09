@@ -5,60 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <h1>Computer Society of India<br>AKGEC STUDENT BRANCH</h1>
-    <h3>Please fill the following form if you wish to be the part of our program
-    </h3>
-    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
-        <div class="design" id="name">
-        Name:<input type="text" name="fname">
-        <span class="form_error"></span>
-        </div>
+    <div class="container">
+        <h1>CSI Validation Form</h1>
+        <form id="form" method="post">
+            <!--1.Name-->
+            <div class="form_grp">
+                <label for="fname">Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter your Full Name">
+                <div class="error"></div>     
+            </div>
+            <!--2.Email-->
+            <div class="form_grp">
+                <label for="email">Email Id</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter your Email">
+                <div class="error"></div>
+            </div>
+            <!--3.PhoneNo-->
+            <div class="form_grp">
+                <label for="phone">PhoneNo</label>
+                <input type="phone" class="form-control" id="phone" placeholder="Enter your Phone Number">
+                <div class="error"></div>
+            </div>
+            <!--4.Password-->
+            <div class="form_grp">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Enter your Password">
+                <div class="error"></div>
+            </div>
+            <!--5.Re-Password-->
+            <div class="form_grp">
+                <label for="repassword">Password</label>
+                <input type="password" class="form-control" id="repass" placeholder="Enter your Password again">
+                <div class="error"></div>
+            </div>
+            <!--6.Buttons-->
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
 
-        <div class="design" id="email">
-            Email:<input type="email" name="femail">
-            <span class="form_error"><b></b></span>
-            </div>
-
-         <div class="design" id="phone">
-            Phone Number:<input type="phone" name="fphone">
-            <span class="form_error"><b></b></span>
-            </div>
-
-        <div class="design" id="pass">
-            Password:<input type="password" name="fpass">
-            <span class="form_error"><b></b></span>
-            </div>
-                    
-        <div class="design" id="cpass">
-            Confirm Password:<input type="password" name="fcpass">
-            <span class="form_error"><b></b></span>
-            </div>
-        <input type="submit" class="btn" value="Submit">
-    </form>
+        </form>
+    </div>
 </body>
 
-<script>
-        function seterror( id, error)
-    {
-        //set error inside tag of id
-        element = document.getElementById(id);
-        element.getElementsByClassName('form_error')[0].innerHtml = error;
-    }
-    function validateForm()
-    {
-        var returnval = true;
-        var name = document.forms['myForm']["fname"].value;
-            if(name.length<3)
-                {
-                     seterror("name","Length is too short");
-                     returnval = false;
-                }
-    return returnval;
-    }
- </script>
 </html>
