@@ -1,16 +1,18 @@
 body {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding-left: 850px;
 }
-
 #form {
     width: 600px;
-    margin: 25px auto 0 auto;
-    padding: 25px;
+    margin: 25px auto 25px auto;
+    padding: 35px;
     background-color: whitesmoke;
     border-radius: 4px;
     font-size: 12px;
 }
-h1 {
+ h1 {
+    text-align: center;
+}
+h4{
     color:#fff;
     text-align: center;
 }

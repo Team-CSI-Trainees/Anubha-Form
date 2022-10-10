@@ -7,13 +7,26 @@ var phone= document.getElementById('phone');
 var pass =document.getElementById('pass');
 var repass =document.getElementById('repass');
 
-//var form_name = document.getElementById('fname-err');
-
 form.addEventListener('submit' , e => {
-    e.preventDefault();
 
     validateInputs();
+
+    if(isformValid==true){
+        form.submit();
+    }
+    else{
+        e.preventDefault();
+    }
 });
+function isformValid(){
+    const inputContainers = form.querySelectorAll('.form_grp');
+    inputContainers.forEach((container)=>{
+    if(container.classList.contains('setError')){
+        result = false;
+    }
+    });
+        return result;
+}
 
 const setError = (element , message) =>{
     const inputControl = element.parentElement;
@@ -56,6 +69,7 @@ const validateInputs =() =>{
     }
     else{
         setSuccess(fname);
+        console.log(fname);
     }
     if(emailValue==''){
         setError(email,'*Required');
@@ -93,8 +107,7 @@ const validateInputs =() =>{
     else{
         setSuccess(repass);
     }
-
-
-
 }
 }
+
+
