@@ -122,3 +122,28 @@ a{
     }
     
 }
+@media only screen and (max-width: 700px) and (min-width: 100px){
+    .container{
+        width: 100%;
+        padding: 20px;
+        margin: 2px;
+    }
+    .row{
+        flex-direction: column;
+        align-content: center;
+    }
+    .col-1{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        align-content: center;
+    }
+    .col-2{
+        flex-basis: 100%;
+        align-content: center;
+    }
+    .col-2 .background{
+        width: 50%;
+        align-content: center;
+        padding-top: 200px;
+    }
+}

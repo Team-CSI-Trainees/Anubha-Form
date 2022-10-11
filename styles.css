@@ -32,19 +32,15 @@ body {
     font-family: 'EB Garamond', serif;
     font-size: 55px;
 }
-h4{
-    color:#150050;
-    text-align: center;
-}
 
 #form button {
     padding: 13px;
-    margin-top: 13px;
+    margin-top: 30px;
     width: 100%;
     color: white;
     background-color: #F73D93;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .form_grp{
     display: flex;
@@ -73,4 +69,26 @@ h4{
 }
 .error{
     color: red;
+}
+
+@media only screen and (max-width: 700px) and (min-width: 100px){
+    .container{
+        width: 100%;
+        padding: 2px;
+        margin: 2px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    #form{
+        width: 100%;
+    }
+    .form_grp label{
+         width: 100%;
+         font-size: 22px;
+    }
+    .form_grp input{
+        padding: 10px;
+        font-size: 18px ;
+    }
 }
