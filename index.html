@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validation Form Javascript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>CSI Validation Form</h1>
+        <h1>Validation Form</h1>
         <form id="form" action="submit.html" method="get">
             <!--1.Name-->
             <div class="form_grp">
@@ -40,7 +44,7 @@
             </div>
             <!--5.Re-Password-->
             <div class="form_grp">
-                <label for="repassword">Password</label>
+                <label for="repassword">Confirm Password</label>
                 <input type="password" class="form-control" id="repass" placeholder="Enter your Password again">
                 <div class="error"></div>
             </div>
@@ -48,7 +52,7 @@
             <button type="submit">submit</button>
             <button type="reset">reset</button>
         </form>
-        <h4>*In case you have filled the wrong details<br>first refresh the page and then fill correct details</h4>
+        <h4>*In case you have filled the wrong details first refresh the page and then fill correct details</h4>
     </div>
 </body>
 
